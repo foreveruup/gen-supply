@@ -377,7 +377,28 @@
   .clients-track { display: flex; gap: 14px; align-items: center; animation: scroll-clients 22s linear infinite; width: max-content; }
   .clients-track:hover { animation-play-state: paused; }
   @keyframes scroll-clients { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-  .clients-logo { background: #fff; border: 1px solid #eee; border-radius: 6px; width: 130px; height: 60px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; padding: 8px 14px; filter: grayscale(1); opacity: 0.6; transition: filter 0.2s, opacity 0.2s; }
+  .clients-logo {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    width: 200px;      /* было 130px */
+    height: 100px;      /* было 60px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 10px 16px;
+    filter: grayscale(1);
+    opacity: 0.6;
+    transition: filter 0.2s, opacity 0.2s;
+  }
+  .clients-logo img {
+  max-width: 150px;
+  max-height: 65px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  }
   .clients-logo:hover { filter: grayscale(0); opacity: 1; }
   .clients-logo span { font-size: 10px; font-weight: 700; color: #555; text-align: center; }
 
@@ -596,7 +617,7 @@
     <a href="contacts.html">Контакты</a>
   </nav>
   <div class="header-right">
-    <a href="mailto:vodoponigeniekz@yandex.ru" class="header-email">vodoponigeniekz@yandex.ru</a>
+    <a href="mailto:Pumpsgs@gmail.com" class="header-email">Pumpsgs@gmail.com</a>
     <a href="#contact" class="header-btn">Оставить заявку</a>
   </div>
 
@@ -622,7 +643,7 @@
     </div>
   </div>
   <a href="contacts.html">Контакты</a>
-  <a href="mailto:vodoponigeniekz@yandex.ru" class="mobile-email">vodoponigeniekz@yandex.ru</a>
+  <a href="mailto:Pumpsgs@gmail.com" class="mobile-email">Pumpsgs@gmail.com</a>
   <a href="#contact" class="mobile-menu-btn" id="mobileMenuBtn">Оставить заявку</a>
 </div>
 
@@ -696,7 +717,7 @@
 
       <div class="principle-diagram">
         <div class="principle-img-wrap">
-          <img class="main-diagram" src="media/princip_img.webp" alt="Схема работы иглофильтра" onerror="this.style.display='none'">
+          <img class="main-diagram" src="media/princip_img.jpg" alt="Схема работы иглофильтра" onerror="this.style.display='none'">
           <div class="hotspot" style="left:38%;top:18%;">
             <div class="hotspot-ring"></div>
             <button class="hotspot-btn"></button>
@@ -780,32 +801,46 @@
 
 <!-- CLIENTS -->
 <section class="clients">
-  <div class="clients-watermark">Наши клиенты</div>
+  <div class="clients-watermark">Наши партнеры</div>
   <div class="container">
-    <h2 class="clients-title">Наши клиенты</h2>
+    <h2 class="clients-title">Наши партнеры</h2>
   </div>
   <div class="clients-track-wrap">
     <div class="clients-track">
-      <div class="clients-logo"><span>am</span></div>
-      <div class="clients-logo"><span>START</span></div>
-      <div class="clients-logo"><span>ЭГО ХОЛДИНГ</span></div>
-      <div class="clients-logo"><span>ГАЗПРОМ</span></div>
-      <div class="clients-logo"><span>SEVEN SUNS</span></div>
-      <div class="clients-logo"><span>A1</span></div>
-      <div class="clients-logo"><span>РТУ</span></div>
-      <div class="clients-logo"><span>Правительство СПб</span></div>
-      <div class="clients-logo"><span>МЕГАЛИТ</span></div>
-      <div class="clients-logo"><span>Nord Stream</span></div>
-      <div class="clients-logo"><span>am</span></div>
-      <div class="clients-logo"><span>START</span></div>
-      <div class="clients-logo"><span>ЭГО ХОЛДИНГ</span></div>
-      <div class="clients-logo"><span>ГАЗПРОМ</span></div>
-      <div class="clients-logo"><span>SEVEN SUNS</span></div>
-      <div class="clients-logo"><span>A1</span></div>
-      <div class="clients-logo"><span>РТУ</span></div>
-      <div class="clients-logo"><span>Правительство СПб</span></div>
-      <div class="clients-logo"><span>МЕГАЛИТ</span></div>
-      <div class="clients-logo"><span>Nord Stream</span></div>
+      <div class="clients-logo"><img src="media/clients-logo/tso.png" alt="ТШО"></div>
+      <div class="clients-logo"><img src="media/clients-logo/ncoc.png" alt="NCOC"></div>
+      <div class="clients-logo"><img src="media/clients-logo/anpz.png" alt="ANPZ"></div>
+      <div class="clients-logo"><img src="media/clients-logo/pnhz.png" alt="ПНХЗ"></div>
+      <div class="clients-logo"><img src="media/clients-logo/gres-ekibastuz.jpg" alt="ГРЭС Экибастуз"></div>
+      <!-- <div class="clients-logo"><img src="media/clients-logo/gres-almaty" alt="ГРЭС Алматы"></div> -->
+      <div class="clients-logo"><img src="media/clients-logo/tec-pavlodar.png" alt="ТЭЦ Павлодар"></div>
+      <div class="clients-logo"><img src="media/clients-logo/bi-group.png" alt="BI Group"></div>
+      <div class="clients-logo"><img src="media/clients-logo/qazaqstroy.png" alt="Qazaq Stroy"></div>
+      <div class="clients-logo"><img src="media/clients-logo/integra.svg" alt="Integra"></div>
+      <div class="clients-logo"><img src="media/clients-logo/k7.png" alt="K7 Group"></div>
+      <div class="clients-logo"><img src="media/clients-logo/lrt.svg" alt="LRT Astana"></div>
+      <div class="clients-logo"><img src="media/clients-logo/akimat-ast.png" alt="Акимат Астана"></div>
+      <div class="clients-logo"><img src="media/clients-logo/akimat-atyrau.png" alt="Акимат Атырау"></div>
+      <div class="clients-logo"><img src="media/clients-logo/akimat-oral.svg" alt="Акимат Орал"></div>
+      <div class="clients-logo"><img src="media/clients-logo/akimat-zko.jpg" alt="Акимат ЗКО"></div>
+
+
+      <div class="clients-logo"><img src="media/clients-logo/tso.png" alt="ТШО"></div>
+      <div class="clients-logo"><img src="media/clients-logo/ncoc.png" alt="NCOC"></div>
+      <div class="clients-logo"><img src="media/clients-logo/anpz.png" alt="ANPZ"></div>
+      <div class="clients-logo"><img src="media/clients-logo/pnhz.png" alt="ПНХЗ"></div>
+      <div class="clients-logo"><img src="media/clients-logo/gres-ekibastuz.jpg" alt="ГРЭС Экибастуз"></div>
+      <!-- <div class="clients-logo"><img src="media/clients-logo/gres-almaty" alt="ГРЭС Алматы"></div> -->
+      <div class="clients-logo"><img src="media/clients-logo/tec-pavlodar.png" alt="ТЭЦ Павлодар"></div>
+      <div class="clients-logo"><img src="media/clients-logo/bi-group.png" alt="BI Group"></div>
+      <div class="clients-logo"><img src="media/clients-logo/qazaqstroy.png" alt="Qazaq Stroy"></div>
+      <div class="clients-logo"><img src="media/clients-logo/integra.svg" alt="Integra"></div>
+      <div class="clients-logo"><img src="media/clients-logo/k7.png" alt="K7 Group"></div>
+      <div class="clients-logo"><img src="media/clients-logo/lrt.svg" alt="LRT Astana"></div>
+      <div class="clients-logo"><img src="media/clients-logo/akimat-ast.png" alt="Акимат Астана"></div>
+      <div class="clients-logo"><img src="media/clients-logo/akimat-atyrau.png" alt="Акимат Атырау"></div>
+      <div class="clients-logo"><img src="media/clients-logo/akimat-oral.svg" alt="Акимат Орал"></div>
+      <div class="clients-logo"><img src="media/clients-logo/akimat-zko.jpg" alt="Акимат ЗКО"></div>
     </div>
   </div>
 </section>
@@ -908,42 +943,100 @@
     <div class="projects-carousel-wrap">
       <div class="projects-carousel">
         <div class="projects-track" id="projectsTrack">
+
+  <!-- ПРОМЫШЛЕННЫЕ -->
+          <div class="project-slide">
+            <div class="project-slide-img" style="background:#1a3a5c;">
+              <img src="media/tco.jpg" alt="ТШО" onerror="this.style.display='none'">
+            </div>
+            <div class="project-slide-body">
+              <h3>Промышленные объекты<br>ТШО, NCOC, АНПЗ, ПНХЗ</h3>
+              <p>Водопонижение при проведении ремонтных и строительных работ на крупнейших нефтегазовых предприятиях Казахстана. <strong>Тенгизшевройл (ТШО), NCOC, Атырауский НПЗ (АНПЗ), Павлодарский НХЗ (ПНХЗ)</strong> — работы по снижению УГВ в зонах строительства технологических объектов и фундаментов.</p>
+            </div>
+          </div>
+
+          <div class="project-slide">
+            <div class="project-slide-img" style="background:#2a3a2a;">
+              <img src="media/gres.jpg" alt="ГРЭС" onerror="this.style.display='none'">
+            </div>
+            <div class="project-slide-body">
+              <h3>Энергетика<br>ГРЭС Экибастуз, ГРЭС Алматы, ТЭЦ Павлодар</h3>
+              <p>Водопонижение котлованов при ремонте и строительстве фундаментов энергетических объектов. Работа в сложных гидрогеологических условиях с поддержанием непрерывного производственного цикла предприятий.</p>
+            </div>
+          </div>
+
+          <!-- ГРАЖДАНСКОЕ СТРОИТЕЛЬСТВО -->
           <div class="project-slide">
             <div class="project-slide-img" style="background:#c8dff5;">
-              <img src="media/nordstream.jpg" alt="Nord Stream" onerror="this.style.display='none'">
+              <img src="media/bigroup.jpg" alt="BI Group" onerror="this.style.display='none'">
             </div>
             <div class="project-slide-body">
-              <h3>Nord Stream AG<br>Газопровод «Северный поток-2»</h3>
-              <p>GenSupply произвела водопонижение 10 котлованов, расположенных на побережье Балтийского моря. Глубина котлованов составляла 5 метров, использовались шестиметровые иглофильтры SVP-50. <strong>Общая площадь водопонижения составила более 6000 м².</strong><br><br><strong>Срок: январь — март 2022г.</strong></p>
+              <h3>BI Group<br>Жилые комплексы и бизнес-центры</h3>
+              <p>Водопонижение котлованов при возведении жилых комплексов и бизнес-центров. Работы включали монтаж иглофильтровых систем по периметру котлованов глубиной до 7 метров с задействованием нескольких установок BBA Pumps одновременно.</p>
             </div>
           </div>
+
           <div class="project-slide">
             <div class="project-slide-img" style="background:#bfd4ed;">
-              <img src="media/bereg.jpg" alt="ЖК Bereg" onerror="this.style.display='none'">
+              <img src="media/qazaqstroy.jpg" alt="Qazaq Stroy" onerror="this.style.display='none'">
             </div>
             <div class="project-slide-body">
-              <h3>ЖК «Bereg. Курортный»</h3>
-              <p>Водопонижение котлована периметром 550 метров.<br>5 станций BBA Pumps.<br><br><strong>Срок: апрель — сентябрь 2022г.</strong></p>
+              <h3>Qazaq Stroy, Integra, K7 Group</h3>
+              <p>Комплексное водопонижение при строительстве жилых и коммерческих объектов. <strong>Qazaq Stroy, Integra, K7 Group</strong> — выполнены работы по снижению уровня грунтовых вод, обеспечившие безопасное проведение нулевого цикла строительства.</p>
             </div>
           </div>
+
+          <!-- СОЦИАЛЬНЫЕ ОБЪЕКТЫ -->
           <div class="project-slide">
-            <div class="project-slide-img" style="background:#b4cce8;">
-              <img src="media/agroeko.jpg" alt="АГРОЭКО" onerror="this.style.display='none'">
+            <div class="project-slide-img" style="background:#1a2a4a;">
+              <img src="media/lrt.jpg" alt="LRT Astana" onerror="this.style.display='none'">
             </div>
             <div class="project-slide-body">
-              <h3>ГК «АГРОЭКО»</h3>
-              <p>Водопонижение при производстве фундаментной плиты.<br>Глубина котлована 6 метров.<br><br><strong>Срок: январь — март 2020г.</strong></p>
+              <h3>LRT Astana<br>Лёгкое рельсовое транспортное кольцо</h3>
+              <p>Водопонижение при строительстве инфраструктуры городского рельсового транспорта в Астане. Работы проводились в условиях плотной городской застройки с соблюдением строгих требований к срокам и безопасности.</p>
             </div>
           </div>
+
           <div class="project-slide">
-            <div class="project-slide-img" style="background:#a8c1e0;">
-              <img src="media/arkazhskaya.jpg" alt="Аркажская Слобода" onerror="this.style.display='none'">
+            <div class="project-slide-img" style="background:#1a3020;">
+              <img src="media/akimat_astana.jpg" alt="Акимат Астана" onerror="this.style.display='none'">
             </div>
             <div class="project-slide-body">
-              <h3>ЖК «Аркажская Слобода»</h3>
-              <p>4 единицы BBA Pumps, 200 иглофильтров.<br>Глубина котлована 6-7м.<br><br><strong>Срок: февраль — март 2021г.</strong></p>
+              <h3>Акимат г. Астана<br>Ливневые канализационные системы</h3>
+              <p>Водопонижение при строительстве ливневых канализационных систем города Астаны. Работы в условиях высокого УГВ по трассам протяжённостью несколько километров с поэтапным монтажом иглофильтровых систем.</p>
             </div>
           </div>
+
+          <div class="project-slide">
+            <div class="project-slide-img" style="background:#2a1a0a;">
+              <img src="media/atyrau.jpg" alt="Атырау" onerror="this.style.display='none'">
+            </div>
+            <div class="project-slide-body">
+              <h3>Акимат г. Атырау<br>Строительство школ</h3>
+              <p>Водопонижение при строительстве фундаментов школ в г. Атырау. Регион характеризуется высоким залеганием грунтовых вод — применялись шестиметровые иглофильтры SVP-50 с несколькими насосными станциями BBA Pumps.</p>
+            </div>
+          </div>
+
+          <div class="project-slide">
+            <div class="project-slide-img" style="background:#0a1a2a;">
+              <img src="media/oral.jpg" alt="Орал КНС" onerror="this.style.display='none'">
+            </div>
+            <div class="project-slide-body">
+              <h3>Акимат г. Орал — КНС<br>Алматинская обл. — ЖД мосты</h3>
+              <p>Водопонижение при строительстве канализационно-насосных станций (КНС) в Орале, а также при возведении железнодорожных мостов в Алматинской области. Глубина водопонижения до 8 метров на первом ярусе.</p>
+            </div>
+          </div>
+
+          <div class="project-slide">
+            <div class="project-slide-img" style="background:#1a2a1a;">
+              <img src="media/atyrau_shluz.jpg" alt="Атырау шлюзы" onerror="this.style.display='none'">
+            </div>
+            <div class="project-slide-body">
+              <h3>Атырауская обл. — шлюзы и автомосты<br>ЗКО — школы и административные здания</h3>
+              <p>Водопонижение при строительстве гидротехнических сооружений (шлюзы, автомосты) в Атырауской области и социальных объектов (школы, административные здания) в Западно-Казахстанской области.</p>
+            </div>
+          </div>
+
         </div>
       </div>
       <div class="projects-nav">
@@ -1159,7 +1252,7 @@
           <h4>Контакты</h4>
           <div class="footer-contact-item">
             <span class="footer-contact-label">Email</span>
-            <a href="mailto:vodoponigeniekz@yandex.ru" class="footer-contact-val">vodoponigeniekz@yandex.ru</a>
+            <a href="mailto:Pumpsgs@gmail.com" class="footer-contact-val">Pumpsgs@gmail.com</a>
           </div>
           <div class="footer-contact-item">
             <span class="footer-contact-label">WhatsApp</span>
