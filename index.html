@@ -19,9 +19,9 @@
   .logo-icon img {
     width: 100%; height: 100%; object-fit: cover;
   }
-  .logo-text-wrap { display: flex; flex-direction: column; line-height: 1.1; }
+  .logo-text-wrap { display: flex; flex-direction: column; line-height: 1.1; align-items: center; gap: 1px; }
   .logo-text-svp { font-size: 16px; font-weight: 800; color: #1a1a2e; letter-spacing: 1px; }
-  .logo-text-group { font-size: 9px; font-weight: 600; color: #888; letter-spacing: 2px; text-transform: uppercase; }
+  .logo-text-group { font-size: 12px; font-weight: 800; color: #1a1a2e; letter-spacing: 1px; text-transform: none; }
   .hamburger { width: 36px; height: 36px; display: flex; flex-direction: column; justify-content: center; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
   .hamburger span { display: block; height: 2px; background: #1a1a2e; border-radius: 2px; transition: all 0.3s; }
   .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -220,7 +220,7 @@
   .clients-title { font-size: 26px; font-weight: 800; color: #1a1a2e; margin-bottom: 36px; position: relative; z-index: 1; }
   .clients-track-wrap { overflow: hidden; position: relative; z-index: 1; }
   .clients-track { display: flex; gap: 14px; align-items: center; animation: scroll-clients 28s linear infinite; width: max-content; }
-  .clients-track:hover { animation-play-state: paused; }
+  .clients-logo:hover { animation-play-state: running; }
   @keyframes scroll-clients { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
   .clients-logo { background: #fff; border: 1px solid #eee; border-radius: 6px; width: 200px; height: 100px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; padding: 10px 16px; filter: grayscale(1); opacity: 0.6; transition: filter 0.2s, opacity 0.2s; }
   .clients-logo img { max-width: 150px; max-height: 65px; width: auto; height: auto; object-fit: contain; }
@@ -384,9 +384,8 @@
     <div class="nav-dropdown" id="headerDropdown">
       <a href="catalog.html" class="has-arrow">Каталог оборудования</a>
       <div class="dropdown-menu">
-        <a href="catalog.html">Все категории</a>
-        <a href="category.html?cat=pumps">Насосные станции</a>
-        <a href="category.html?cat=needlefilters">Комплектующие</a>
+        <a href="category_pumps.html">Насосные станции</a>
+        <a href="category_complect.html">Комплектующие</a>
       </div>
     </div>
     <a href="contacts.html">Контакты</a>
@@ -403,8 +402,8 @@
   <div class="mobile-menu-section">
     <span class="mobile-menu-section-label">Каталог оборудования</span>
     <div class="mobile-menu-sub">
-      <a href="category.html?cat=pumps">Насосные станции</a>
-      <a href="category.html?cat=needlefilters">Комплектующие</a>
+      <a href="category_pumps.html">Насосные станции</a>
+      <a href="category_complect.html">Комплектующие</a>
     </div>
   </div>
   <a href="contacts.html">Контакты</a>
@@ -458,7 +457,7 @@
     <div class="principle-grid">
       <div class="principle-text">
         <h2>Принцип работы оборудования</h2>
-        <p>Иглофильтры – трубки со щелевыми отверстиями предназначены для осушения обводненных грунтов. Иглы устанавливаются по периметру водопонижаемой территории, образуя пути для отведения воды.<br><br>С помощью вакуумной насосной системы вода всасывается через иглы снижая уровень грунтовых вод, а также предотвращая размытие грунта.</p>
+        <p>Иглофильтры – трубки со щелевыми отверстиями предназначены для осушения обводненных грунтов. Иглы устанавливаются по периметру водопонижаемой территории, образуя пути для отведения воды.<br><br>С помощью поршневой насосной системы вода всасывается через иглы снижая уровень грунтовых вод, а также предотвращая размытие грунта.</p>
         <a href="#contact">Оформить заявку на водопонижение</a>
       </div>
       <div class="principle-diagrams">
@@ -474,14 +473,14 @@
   <div class="container">
     <h2 class="catalog-title">Оборудование</h2>
     <div class="catalog-grid" style="grid-template-columns: 1fr 1fr;">
-      <div class="catalog-card" onclick="location.href='category.html?cat=pumps'">
+      <div class="catalog-card">
         <h3>Насосные станции</h3>
-        <a href="category.html?cat=pumps" class="catalog-card-link">Перейти в каталог</a>
+        <a href="category_pumps.html" class="catalog-card-link">Перейти в каталог</a>
         <div class="catalog-card-img"><img src="media/oborudovanie/nasos-station.png" alt="Насосные станции"></div>
       </div>
-      <div class="catalog-card" onclick="location.href='category.html?cat=needlefilters'">
+      <div class="catalog-card">
         <h3>Комплектующие</h3>
-        <a href="category.html?cat=needlefilters" class="catalog-card-link">Перейти в каталог</a>
+        <a href="category_complect.html" class="catalog-card-link">Перейти в каталог</a>
         <div class="catalog-card-img"><img src="media/oborudovanie/complect.png" alt="Комплектующие"></div>
       </div>
     </div>
@@ -556,7 +555,7 @@
     <div class="how-scroll-wrap" id="howScroll">
       <div class="how-steps-track">
         <div class="how-step"><div class="how-step-num">1</div><h3>Изучение объекта</h3><p>Наш специалист выезжает в удобное для вас время для проведения экспертной оценки на объект.</p></div>
-        <div class="how-step"><div class="how-step-num">2</div><h3>Проектное решение</h3><p>Разрабатываем оптимальное проектное решение и подбираем лучшее оборудование — БЕСПЛАТНО.</p></div>
+        <div class="how-step"><div class="how-step-num">2</div><h3>Проектное решение</h3><p>Разрабатываем оптимальное проектное решение и подбираем лучшее оборудование.</p></div>
         <div class="how-step"><div class="how-step-num">3</div><h3>Подписание договора</h3><p>Обсуждаем договорные отношения, после чего подписываем договор.</p></div>
         <div class="how-step"><div class="how-step-num">4</div><h3>Установка системы</h3><p>Мобилизация в черте города бесплатно, услуги монтажа/демонтажа согласовываются с заказчиком.</p></div>
         <div class="how-step"><div class="how-step-num">5</div><h3>Мониторинг объекта</h3><p>Проект остается под нашим контролем 24 часа в сутки.</p></div>
@@ -608,8 +607,10 @@
       <defs>
         <path id="pumpRingPath" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/>
       </defs>
-      <text font-family="Montserrat,sans-serif" font-size="12" font-weight="700" fill="rgba(255,175,80,0.7)" letter-spacing="4">
-        <textPath href="#pumpRingPath">ВОДОПОНИЖЕНИЕ • КАЗАХСТАН • </textPath>
+      <text font-family="Montserrat,sans-serif" font-size="11" font-weight="700" fill="rgba(255,175,80,0.7)" letter-spacing="4">
+        <textPath href="#pumpRingPath">
+         • ВОДОПОНИЖЕНИЕ • КАЗАХСТАН • GENSUPPLY
+        </textPath>
       </text>
     </svg>
   </div>
@@ -661,7 +662,7 @@
           <option value="">Выберите удобный вид связи</option>
           <option>Телефон</option>
           <option>WhatsApp</option>
-          <option>Telegram</option>
+          <option>Instagram</option>
         </select>
         <label class="contact-checkbox">
           <input type="checkbox" checked>
@@ -710,7 +711,7 @@
       <p>Снижение уровня грунтовых вод при проведении работ нулевого цикла играет важную роль во многих строительных проектах. Проблемы, связанные с подтоплением котлованов и траншей, приводят к размытию стенок и могут быть успешно решены при проведении соответствующих мероприятий по водопонижению.</p>
       <p>Одним из наиболее распространенных и эффективных методов снижения уровня грунтовых вод является использование иглофильтровых установок. Основным преимуществом их использования является простота и скорость монтажа.</p>
       <p>Компания «GenSupply» предлагает эффективные решения для водопонижения с использованием самых надежных технологий. Мы специализируемся на поставке и производстве иглофильтровых установок, а также комплектующих для снижения уровня грунтовых вод.</p>
-      <p>Мы работаем на всей территории Казахстана и СНГ. У нас вы можете как купить оборудование для водопонижения, так и взять его в аренду.</p>
+      <p>Мы работаем на всей территории Казахстана. У нас вы можете как купить оборудование для водопонижения, так и взять его в аренду.</p>
     </div>
   </div>
 </section>
@@ -735,7 +736,7 @@
         </div>
       </div>
       <div class="footer-cols">
-        <div class="footer-col"><h4>Каталог</h4><ul><li><a href="category.html?cat=pumps">Насосные станции</a></li><li><a href="category.html?cat=needlefilters">Комплектующие</a></li></ul></div>
+        <div class="footer-col"><h4>Каталог</h4><ul><li><a href="category_pumps.html">Насосные станции</a></li><li><a href="category_complect.html">Комплектующие</a></li></ul></div>
         <div class="footer-col"><h4>Компания</h4><ul><li><a href="about.html">О нас</a></li><li><a href="catalog.html">Каталог</a></li><li><a href="#contact">Оставить заявку</a></li></ul></div>
         <div class="footer-col" style="grid-column: 1 / -1;">
           <h4>Контакты</h4>
@@ -745,7 +746,7 @@
           <div class="footer-contact-item"><span class="footer-contact-label">Телефон</span><a href="tel:+77015008822" class="footer-contact-val">+7 701 500-88-22</a></div>
           <div class="footer-contact-item"><span class="footer-contact-label">Астана</span><span class="footer-contact-val" style="cursor:default;">пр. Мангилик ел 21</span></div>
           <div class="footer-contact-item"><span class="footer-contact-label">Атырау</span><span class="footer-contact-val" style="cursor:default;">Промбаза, ул. Ширина 62</span></div>
-          <div class="footer-contact-item"><span class="footer-contact-label">Работаем по всему</span><span class="footer-contact-val" style="cursor:default;">Казахстану и СНГ</span></div>
+          <div class="footer-contact-item"><span class="footer-contact-label">Работаем по всему</span><span class="footer-contact-val" style="cursor:default;">Казахстану</span></div>
         </div>
       </div>
     </div>
