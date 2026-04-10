@@ -88,15 +88,15 @@
   .product-price-btn { flex: 1; background: #e8931a; color: #fff; border: none; padding: 10px 12px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; transition: background 0.2s; white-space: nowrap; }
   .product-price-btn:hover { background: #d4821a; }
 
-  /* ШИРОКАЯ карточка (одиночный товар в категории) */
-  .product-card-wide { background: #fff; border-radius: 14px; border: 1px solid #e8edf5; display: flex; flex-direction: row; overflow: hidden; transition: transform 0.25s, box-shadow 0.25s; }
+
+  .product-card-wide { background: #fff; border-radius: 14px; border: 1px solid #e8edf5; display: flex; flex-direction: column; transition: transform 0.25s, box-shadow 0.25s; position: relative; }
   .product-card-wide:hover { transform: translateY(-4px); box-shadow: 0 14px 40px rgba(0,0,0,0.11); }
-  .product-card-wide .product-img { width: 280px; min-width: 280px; height: auto; min-height: 220px; }
-  .product-card-wide .product-body { padding: 28px 28px 20px; justify-content: flex-start; }
-  .product-card-wide .product-name { font-size: 18px; margin-bottom: 18px; }
-  .product-card-wide .product-spec { font-size: 14px; }
-  .product-card-wide .product-footer { padding: 20px 28px 24px; }
-  .product-card-wide .product-price-btn { max-width: 220px; padding: 12px 16px; font-size: 14px; }
+  .product-card-wide .product-img { height: 210px; background: #f9fafb; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; }
+  .product-card-wide .product-body { padding: 18px 20px 14px; flex: 1; display: flex; flex-direction: column; }
+  .product-card-wide .product-name { font-size: 15px; font-weight: 700; color: #1a1a2e; line-height: 1.5; margin-bottom: 14px; flex: 1; }
+  .product-card-wide .product-spec { font-size: 13px; }
+  .product-card-wide .product-footer { padding: 14px 20px 18px; border-top: 1px solid #f0f0f0; }
+  .product-card-wide .product-price-btn { font-size: 13px; }
 
   /* ORDER MODAL */
   .order-modal-overlay { display: none; position: fixed; inset: 0; z-index: 3000; background: rgba(0,0,0,0.55); backdrop-filter: blur(4px); align-items: flex-end; justify-content: center; }
@@ -165,8 +165,7 @@
 
   @media (min-width: 600px) {
     .products-grid { grid-template-columns: 1fr 1fr; gap: 18px; }
-    /* одиночный на мобиле — уже горизонтальный */
-    .product-card-wide .product-img { width: 220px; min-width: 220px; }
+
   }
 
   @media (min-width: 900px) {
@@ -196,16 +195,21 @@
     .page-hero-watermark { font-size: 90px; }
     .products-section { padding: 60px 0 100px; }
     .cat-block-title { font-size: 24px; }
-    /* Широкая карточка на десктопе */
 
 
-    .products-grid { grid-template-columns: repeat(3, 1fr); gap: 22px; }
-    .products-grid:has(> :nth-child(2):last-child) {
-     grid-template-columns: repeat(2, minmax(0, 1fr));
-     max-width: 780px; }
+    
 
-    .product-card-wide .product-img { width: 320px; min-width: 320px; min-height: 260px; }
-    .product-card-wide .product-name { font-size: 20px; }
+    .product-card-wide { flex-direction: row; overflow: hidden; }
+    .product-card-wide .product-img { width: 320px; min-width: 320px; height: auto; min-height: 260px; }
+    .product-card-wide .product-body { padding: 28px 28px 20px; }
+    .product-card-wide .product-name { font-size: 20px; margin-bottom: 18px; }
+    .product-card-wide .product-spec { font-size: 14px; }
+    .product-card-wide .product-footer { padding: 20px 28px 24px; }
+    .product-card-wide .product-price-btn { max-width: 220px; padding: 12px 16px; font-size: 14px; }
+
+
+
+    
     .order-modal-overlay { align-items: center; padding: 20px; }
     .order-modal { border-radius: 16px; max-width: 520px; max-height: 90vh; }
     .order-modal-header { padding: 28px 28px 0; }
@@ -398,12 +402,12 @@ const CATEGORIES = [
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#e8931a" stroke-width="2" stroke-linecap="round"><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="12" x2="12" y2="22"/></svg>`,
     products: [
       {
-        id: 4, img: 'media/oborudovanie/otvody.png',
+        id: 4, img: 'media/oborudovanie/otvod.png',
         name: 'Отвод Д100',
         specs: [['Диаметр', '100 мм (Д100)'], ['Тип', 'Отвод 90°'], ['Соединение', 'Быстроразъёмное Camlock'], ['Материал', 'Сталь / алюминий']]
       },
       {
-        id: 5, img: 'media/oborudovanie/collectors.webp',
+        id: 5, img: 'media/oborudovanie/troinik.png',
         name: 'Тройник Д100',
         specs: [['Диаметр', '100 мм (Д100)'], ['Тип', 'Тройник'], ['Соединение', 'Быстроразъёмное Camlock'], ['Материал', 'Сталь / алюминий']]
       }
@@ -430,12 +434,12 @@ const CATEGORIES = [
     icon: `<svg viewBox="0 0 24 24" fill="none" stroke="#e8931a" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg>`,
     products: [
       {
-        id: 8, img: 'media/oborudovanie/zamki.png',
+        id: 8, img: 'media/oborudovanie/zaglushki.png',
         name: 'Заглушки внутренние / наружные Д100',
         specs: [['Диаметр', '100 мм (Д100)'], ['Тип', 'Внутренняя и наружная'], ['Материал', 'Алюминий / сталь'], ['Соединение', 'Быстроразъёмное Camlock']]
       },
       {
-        id: 9, img: 'media/oborudovanie/zamki.png',
+        id: 9, img: 'media/oborudovanie/zaglushki.png',
         name: 'Заглушки внутренние / наружные Д50',
         specs: [['Диаметр', '50 мм (Д50)'], ['Тип', 'Внутренняя и наружная'], ['Материал', 'Алюминий / сталь'], ['Соединение', 'Быстроразъёмное Camlock']]
       }
